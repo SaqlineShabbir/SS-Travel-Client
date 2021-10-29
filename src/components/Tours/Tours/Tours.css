@@ -1,0 +1,6 @@
+.tours-container{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    background-color:rgba(255, 255, 255, 0.342);
+    margin: 100px;
+}

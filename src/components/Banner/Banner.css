@@ -1,0 +1,19 @@
+.banner{
+    height:110vh;
+    width: 100%;
+}
+.banner-texts{
+    padding-top:300px;
+    padding-inline: 100px;
+  
+}
+.banner-texts p{
+ padding: 40px;
+   background-color:rgba(255, 255, 255, 0.466);
+   margin-right:700px;
+}
+.banner-texts h1{
+ padding: 20px;
+   background-color:rgba(255, 255, 255, 0.466);
+   margin-right:700px;
+}

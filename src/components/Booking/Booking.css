@@ -1,0 +1,14 @@
+.booking-main{
+    height:200vh
+}
+
+
+.booking-form form{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.booking-form form input{
+    width:40%;
+}
