@@ -19,6 +19,7 @@ import Register from './components/Login/Register/Register';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import MyTours from './components/MyTours/MyTours';
+import ManageAllBooking from './components/ManageAllBooking/ManageAllBooking';
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
+          <Route path="/register">
+            <Register></Register>
+          </Route>
           <Route path="/addTours">
             <AddTours></AddTours>
           </Route>
@@ -45,9 +49,12 @@ function App() {
           <Route path="/signup">
             <Register></Register>
           </Route>
-          <Route path="/myTours">
+          <PrivateRoute path="/manageAllBooking">
+            <ManageAllBooking></ManageAllBooking>
+          </PrivateRoute>
+          <PrivateRoute path="/myTours">
             <MyTours></MyTours>
-          </Route>
+          </PrivateRoute>
           <PrivateRoute path="/booking/:tourId">
             <Booking></Booking>
           </PrivateRoute>

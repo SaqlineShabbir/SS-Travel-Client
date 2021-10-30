@@ -1,21 +1,14 @@
-.tour-container{
+.showAllBooking-container{
     margin: 10px;
     border-radius: 10px;
+    height:630px;
+}
+.showAllBooking-container img{
+    height:300px;
+     width:100%;
 }
 
-.tour-container img{
-height:300px;
-width:100%;
-}
-
-.purchase-btn{
-    border: 1px solid #000;
-    background-color:white;
-    margin-left: 160px;
-    
-}
-
-.tour-container h5{
+.showAllBooking-container h5{
     position:relative;
     bottom:340px;
     background-color:white;
@@ -26,4 +19,3 @@ width:100%;
     
    
 }
-

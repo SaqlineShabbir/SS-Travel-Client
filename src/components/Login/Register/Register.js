@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation,useHistory } from 'react-router-dom';
 import './Register.css'
-
+import img from '../../../images/login2.jpg'
 
 
 import useFirebase from '../../../hooks/useFirebase';
@@ -41,7 +41,7 @@ const Register = () => {
 
     return (
         <div className="register">
-            
+            <img src={img} alt="" />
                 <div className="login">
             <div className="  p-4 my-5 py-5 ">
             <h3 className="mb-4 fw-bold">Creat Account</h3>

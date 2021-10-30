@@ -12,7 +12,7 @@ const Booking = () => {
     const {tourId} = useParams()
     
     const [data,setData] = useState([])
-    const {user} = useFirebase()
+    const {user} = useAuth()
     useEffect(()=>{
         fetch('http://localhost:5000/tours')
         .then(response => response.json())
@@ -20,36 +20,57 @@ const Booking = () => {
     },[])
     const exactItem = data.filter(pd => pd._id === tourId)
     
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
+        console.log(data);
         axios.post('http://localhost:5000/orders', data)
         .then(res =>{
             if(res.data.insertedId){
                 alert('Booked Successfully')
+                reset()
             }
         })
 
 };
+
     return (
         <div>
             <div className="booking-main">
 
-   <div className="booking">
+   <div className="booking-details">
+       <h3>Choosen Tour</h3>
    <img src={exactItem[0]?.img}  alt="" />
   <h5> {exactItem[0]?.name}</h5> 
    <p>{exactItem[0]?.description} </p> 
-  <button>AddToCart</button>
+   <p>{exactItem[0]?.number} </p> 
+  
 
    </div >
    <div className="booking-form">
+       <h4>Book Here</h4>
    <form onSubmit={handleSubmit(onSubmit)}>
-      <input defaultValue={(user?.displayName)} {...register("name")} />
-      <input defaultValue={user?.email}  {...register("email")} />
-      <input defaultValue={exactItem[0]?.name}  {...register("tourName")} />
-      <input defaultValue={exactItem[0]?.img} {...register("tourImg")} />
-      
-      
-      <input type="submit" />
+ 
+  <input defaultValue={(user?.displayName)} {...register("name")} />
+  <input defaultValue={user?.email}  {...register("email")} />
+  
+     {
+         exactItem[0]?.name && <input defaultValue={exactItem[0]?.name}  {...register("tourName")} />
+     }
+     {
+      exactItem[0]?.img &&  <input defaultValue={exactItem[0]?.img} {...register("tourImg")} />
+     }
+     { 
+     exactItem[0]?.description &&  <input defaultValue={exactItem[0]?.description} {...register("description")} />
+     
+     }
+     {
+         exactItem[0]?.number &&<input defaultValue={exactItem[0]?.number} {...register("number")} />
+        
+     }
+        
+      <input type="submit" value="Confirm Book"/>
+
+
     </form>
     </div>
     </div>

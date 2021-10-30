@@ -15,8 +15,8 @@ const Herder = () => {
       <Nav className="ms-auto ">
         <Nav.Link as={Link} className="text-white fw-bold" to="/home">Home</Nav.Link>
         <Nav.Link as={Link} className="text-white fw-bold" to="/addTours">Add Tours</Nav.Link>
-        <Nav.Link as={Link} className="text-white fw-bold" to="/link">Link</Nav.Link>
-        <Nav.Link as={Link}className="text-white fw-bold" to="/link">Link</Nav.Link>
+        <Nav.Link as={Link} className="text-white fw-bold" to="/myTours">My Tours</Nav.Link>
+        <Nav.Link as={Link}className="text-white fw-bold" to="/manageAllBooking">Manage All Booking</Nav.Link>
         
         { 
           user.email?

@@ -17,3 +17,30 @@
    background-color:rgba(255, 255, 255, 0.466);
    margin-right:700px;
 }
+
+
+
+@media only screen and (max-width:688px){
+  .banner{
+    height:50vh;
+    width: 100%;
+}
+.banner-texts{
+  padding-top:30px;
+  padding-inline: 20px;
+
+}
+
+.banner-texts p{
+  padding: 0px;
+    background-color:rgba(255, 255, 255, 0.466);
+    margin-right:0px;
+ }
+
+ .banner-texts h1{
+  padding: 0px;
+    background-color:rgba(255, 255, 255, 0.466);
+    margin-right:0px;
+ }
+ 
+}

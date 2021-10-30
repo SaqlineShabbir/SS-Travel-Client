@@ -16,6 +16,7 @@ const AddTours = () => {
     } 
     return (
         <div className="AddTours">
+            <h4 className="mt-5 text-center">You Can Add A New Tour Here</h4>
             <form onSubmit={handleSubmit(onSubmit)}>
       <input {...register("name", { required: true })} placeholder="Tour Name"/>
       <textarea {...register("description")} placeholder="description"/>

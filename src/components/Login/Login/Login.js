@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLocation,useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth'
 import useFirebase from '../../../hooks/useFirebase';
-
+import img from '../../../images/login2.jpg'
 
 import './Login.css'
 const Login = () => {
@@ -37,7 +37,7 @@ const Login = () => {
     return (
         <div className="register">
         <div>
-            
+            <img src={img} alt="" />
             </div>
             <div className="login">
         <div className="  p-4 my-5 py-5 ">

@@ -1,14 +1,18 @@
 .booking-main{
-    height:200vh
+    height:100vh;
+    display:flex;
+    margin:100px;
 }
-
+.booking-details{
+    width:50%;
+}
 
 .booking-form form{
     display:flex;
     flex-direction:column;
-    justify-content:center;
-    align-items:center;
+   
 }
 .booking-form form input{
-    width:40%;
+    width:500px;
+    margin: 10px;
 }
