@@ -14,7 +14,7 @@ const Booking = () => {
     const [data,setData] = useState([])
     const {user} = useAuth()
     useEffect(()=>{
-        fetch('http://localhost:5000/tours')
+        fetch('https://spooky-asylum-65251.herokuapp.com/tours')
         .then(response => response.json())
         .then(data => setData(data))
     },[])
@@ -23,7 +23,7 @@ const Booking = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://spooky-asylum-65251.herokuapp.com/orders', data)
         .then(res =>{
             if(res.data.insertedId){
                 alert('Booked Successfully')
@@ -35,19 +35,23 @@ const Booking = () => {
 
     return (
         <div>
-            <div className="booking-main">
-
-   <div className="booking-details">
-       <h3>Choosen Tour</h3>
-   <img src={exactItem[0]?.img}  alt="" />
-  <h5> {exactItem[0]?.name}</h5> 
+            <div className="booking-main S">
+            <h3 className="text-center">Chosen Tour</h3>
+   <div className="booking-details ">
+   
+         <div>
+        
+   <img className="m-4" src={exactItem[0]?.img}  alt="" />
+         </div>
+   <div className="booking-text">
+   <h5> {exactItem[0]?.name}</h5> 
    <p>{exactItem[0]?.description} </p> 
-   <p>{exactItem[0]?.number} </p> 
-  
+   <h5>$ {exactItem[0]?.number} </h5> 
+   </div>
 
-   </div >
+
    <div className="booking-form">
-       <h4>Book Here</h4>
+       <h5>Book This Tour</h5>
    <form onSubmit={handleSubmit(onSubmit)}>
  
   <input defaultValue={(user?.displayName)} {...register("name")} />
@@ -73,6 +77,9 @@ const Booking = () => {
 
     </form>
     </div>
+
+   </div >
+
     </div>
         </div>
     );

@@ -8,23 +8,23 @@ const MyTours = () => {
     const {user} = useAuth();
   const [myTours, setMyTours] =useState([])
     useEffect(()=>{
-        fetch(`http://localhost:5000/myTours/${user?.email}`)
+        fetch(`https://spooky-asylum-65251.herokuapp.com/myTours/${user?.email}`)
         .then(res =>res.json())
         .then(data =>setMyTours(data))
     },[])
 
     const handleDelete=(id) => {
-      const proceed =window.confirm('Are you sure you want to delete')
+      const proceed =window.confirm('Are you sure you want to delete?')
       if(proceed) {
 
-        const url = (`http://localhost:5000/orders/${id}`)
+        const url = (`https://spooky-asylum-65251.herokuapp.com/orders/${id}`)
         fetch(url, {
             method: 'DELETE'
         })
         .then(response => response.json())
         .then(data =>{
             if(data.deletedCount > 0){
-                alert('Delete successfully');
+                alert('Deleted successfully');
                 const remaining = myTours.filter(tour => tour._id !== id)
                 setMyTours(remaining)
             }
@@ -34,12 +34,18 @@ const MyTours = () => {
     }
 
     return (
+
+      <div>
+
+        <h4 className="text-center mt-5"> Welcome {user?.displayName} </h4>
+        <h4 className="text-center mt-1"> Your All Booking</h4>
         <div className="my-tours">
 
             
           {
               myTours.map(myTour =><MyTour handleDelete={handleDelete} myTour={myTour}></MyTour>)
           }
+        </div>
         </div>
     );
 

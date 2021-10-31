@@ -1,0 +1,26 @@
+.why-ss-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+
+.ss-card{
+   background-color:black;
+    color:white;
+    height: 350px;
+    margin:30px;
+    padding: 30px;
+}
+
+.icon{
+    color:white;
+    font-size: 200px;
+}
+
+@media only screen and (max-width:688px){
+    .why-ss-container{
+        display: grid;
+        grid-template-columns: 1fr ;
+        
+    }
+}

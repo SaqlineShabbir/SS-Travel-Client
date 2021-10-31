@@ -55,7 +55,7 @@ const Register = () => {
     <input type="password" onBlur={handlePasswordChange} className="form-control" id="exampleInputPassword1"/>
   <br/>
   <p className="text-danger">{error}</p>
-                    <input className="register-button mt-2 w-100" type="submit" value="Creat your SS Dental  account" />
+                    <input className="register-button mt-2 w-100" type="submit" value="Creat your SS Travel  account" />
                 </form>
                 <p className="my-3">Already Have An Account? <Link to="/login">  Log In</Link></p>
              <button onClick={signInUsingGoogle} className="register-button w-100 "><i className="fab fa-google"></i> Sign In with Google</button>

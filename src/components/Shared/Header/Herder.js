@@ -9,14 +9,23 @@ const Herder = () => {
         <div>
             <Navbar bg="dark" expand="lg">
   <Container >
-    <Navbar.Brand className="text-white fw-bold" href="#home">React-Bootstrap</Navbar.Brand>
+    <Navbar.Brand className="text-white fw-bold" href="#home">SS Travel</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ms-auto ">
         <Nav.Link as={Link} className="text-white fw-bold" to="/home">Home</Nav.Link>
-        <Nav.Link as={Link} className="text-white fw-bold" to="/addTours">Add Tours</Nav.Link>
-        <Nav.Link as={Link} className="text-white fw-bold" to="/myTours">My Tours</Nav.Link>
-        <Nav.Link as={Link}className="text-white fw-bold" to="/manageAllBooking">Manage All Booking</Nav.Link>
+        <Nav.Link as={Link} className="text-white fw-bold mx-3" to="/login">Log In</Nav.Link>
+        {
+          user?.email && <Nav.Link as={Link} className="text-white fw-bold mx-3" to="/addTours">Add Tours</Nav.Link>
+        }
+        {
+          user?.email && <Nav.Link as={Link} className="text-white fw-bold" to="/myTours">My Tours</Nav.Link>
+        }
+        {
+          user?.email && <Nav.Link as={Link}className="text-white fw-bold mx-3" to="/manageAllBooking">Manage All Booking</Nav.Link>
+        }
+  
+       
         
         { 
           user.email?

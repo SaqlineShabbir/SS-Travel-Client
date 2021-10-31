@@ -5,8 +5,8 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer">
             <div className="p-5">
-                <h4>SS <span className="my-color">Dental</span> </h4>
-                <p>SS Dental is a dental clinic here you will get all the  services related teeth . We started this clinic year ago</p>
+                <h4>SS <span className="my-color">Travel</span> </h4>
+                <p>SS Travel is Travel agency where you will have save tour and best time with your family</p>
             </div>
             <div className="footer-text">
                 <h6>Contact Us</h6>

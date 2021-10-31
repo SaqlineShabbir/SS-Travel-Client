@@ -1,10 +1,11 @@
 .signup-button{
-    border: none;
-   background-color:rgba(58, 58, 255, 0.842);
+    border: 1px solid white;
+   background-color:rgba(0, 0, 0, 0.61);
    margin-inline: 10px;
    padding-inline:10px ;
    color:white;
    padding-block: 5px;
+   border-radius:10px;
    
  }
  .user img{

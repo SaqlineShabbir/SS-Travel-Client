@@ -4,23 +4,23 @@ import './ManageAllBooking.css'
 const ManageAllBooking = () => {
     const [allBooking, setAllBooking] =useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/orders')
+        fetch('https://spooky-asylum-65251.herokuapp.com/orders')
         .then(res=> res.json())
         .then(data => setAllBooking(data))
     },[])
 
     const handleDelete=(id) => {
-          const proceed =window.confirm('Are you sure you want to delete')
+          const proceed =window.confirm('Are you sure you want to delete?')
           if(proceed) {
 
-            const url = (`http://localhost:5000/orders/${id}`)
+            const url = (`https://spooky-asylum-65251.herokuapp.com/orders/${id}`)
             fetch(url, {
                 method: 'DELETE'
             })
             .then(response => response.json())
             .then(data =>{
                 if(data.deletedCount > 0){
-                    alert('Delete successfully');
+                    alert('Deleted successfully');
                     const remaining = allBooking.filter(book => book._id !== id)
                     setAllBooking(remaining)
                 }

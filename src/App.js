@@ -40,9 +40,9 @@ function App() {
           <Route path="/register">
             <Register></Register>
           </Route>
-          <Route path="/addTours">
+          <PrivateRoute path="/addTours">
             <AddTours></AddTours>
-          </Route>
+          </PrivateRoute>
           <Route path="/tours">
             <Tours></Tours>
           </Route>

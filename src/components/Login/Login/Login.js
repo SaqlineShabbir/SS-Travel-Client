@@ -52,7 +52,7 @@ const Login = () => {
 <p className="text-danger">{error}</p>
                 <input className="register-button mt-2 w-100" type="submit" value="Log In" />
             </form>
-            <p className="my-3">New To SS Dental? <Link to="/signup">Sign Up</Link></p>
+            <p className="my-3">New To SS Travel? <Link to="/signup">Sign Up</Link></p>
          <button onClick={handleGoogleLogIn} className="register-button w-100 "><i class="fab fa-google"></i> Sign In with Google</button>
         </div>
     </div>

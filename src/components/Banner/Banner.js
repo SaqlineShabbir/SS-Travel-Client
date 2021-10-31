@@ -7,8 +7,8 @@ const Banner = () => {
     <div style={{ backgroundImage:`url(${background})` }} className="banner">
       
       <div className="banner-texts">
-          <h1 className="">Welcome to React Bootstrap</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus suscipit cum illo, eum velit possimus! Eos dolore hic eveniet fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum molestias laudantium culpa numquam incidunt impedit distinctio odio beatae nam, placeat at, suscipit non tenetur exercitationem ullam debitis ex quod! Maxime, est! Aspernatur, molestiae impedit veritatis eum quos animi corporis laboriosam inventore voluptatibus assumenda quibusdam ullam ipsam rem sint voluptate soluta.</p>
+          <h1 className="">Welcome To SS Travel</h1>
+          <p>To get the best of your adventure you just need to leave and go where you like . We are working for you .we understands that every client is individual, however all have the same goal, to SAVE TIME AND MONEY. Whether it's business class, economy or low cost travel you require, we guarantee to find the best cost effective route for you.</p>
       </div>
       
     </div>
