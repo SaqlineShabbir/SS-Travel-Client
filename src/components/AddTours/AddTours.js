@@ -6,7 +6,7 @@ const AddTours = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data =>{
         console.log(data);
-        axios.post('http://localhost:5000/tours', data)
+        axios.post('https://spooky-asylum-65251.herokuapp.com/tours', data)
         .then(res =>{
         if(res.data.insertedId){
             alert('Successfully Added')

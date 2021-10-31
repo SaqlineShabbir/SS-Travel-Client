@@ -71,9 +71,10 @@ const Booking = () => {
          exactItem[0]?.number &&<input defaultValue={exactItem[0]?.number} {...register("number")} />
         
      }
-        
+        <input   {...register("address")} placeholder="Address"/>
+        <input   {...register("phone")} placeholder="Phone Number"/>
       <input type="submit" value="Confirm Book"/>
-
+      
 
     </form>
     </div>

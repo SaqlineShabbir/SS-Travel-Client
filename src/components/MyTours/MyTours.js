@@ -35,7 +35,7 @@ const MyTours = () => {
 
     return (
 
-      <div>
+      <div className="my-all-tours">
 
         <h4 className="text-center mt-5"> Welcome {user?.displayName} </h4>
         <h4 className="text-center mt-1"> Your All Booking</h4>
