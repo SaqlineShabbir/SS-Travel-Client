@@ -38,13 +38,35 @@
 @media only screen and (max-width:688px){
     .booking-main{
         height:100%;
+        margin:0px;
+    }
+    .booking-details{
+    
+        display:flex;
+        flex-direction: column;
+    }
+    .booking-form form{
         display:flex;
         flex-direction:column;
-        margin:100px;
+        margin-inline-start: 30px;
+       
+    }
+    .booking-details img{
+        width:330px;
+        height:400px;
     }
 
-    .booking-details{
-        width:100%;
+    .booking-text {
+        margin-top: 100px;
+        padding-inline-end: 0px;
+        padding-inline-start: 10px;
     }
 
+    .booking-form form input{
+        width:300px;
+        margin: 10px;
+    }
+    .booking-form h5{
+        margin-left: 20px;
+    }
 }

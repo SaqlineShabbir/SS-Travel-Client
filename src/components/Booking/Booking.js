@@ -35,7 +35,7 @@ const Booking = () => {
 
     return (
         <div>
-            <div className="booking-main S">
+            <div className="booking-main ">
             <h3 className="text-center">Chosen Tour</h3>
    <div className="booking-details ">
    
